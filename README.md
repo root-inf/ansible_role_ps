@@ -29,6 +29,12 @@ Including an example of how to use your role (for instance, with variables passe
       roles:
         - role: ansible_role_ps
 
+roles/requirements.yml sample
+
+    - name: ansible_role_ps
+      src: https://github.com/root-inf/ansible_role_ps.git
+      version: main
+
 License
 -------
 
