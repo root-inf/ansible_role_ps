@@ -1,0 +1,9 @@
+---
+# tasks file for ansible_role_ps
+- name: Test variables are OK
+  ansible.builtin.assert:
+    that:
+      - ps_list is defined
+      - ps_list is sequence
+    fail_msg: |
+      ps_list: {{ ps_list | d() }}
