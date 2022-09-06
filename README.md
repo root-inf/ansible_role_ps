@@ -35,6 +35,15 @@ roles/requirements.yml sample
       src: https://github.com/root-inf/ansible_role_ps.git
       version: main
 
+vars file(ex. group_vars/all.yml) sample
+
+    ps_list:
+      - process_a
+      - process_b
+      - process_c
+
+
+
 License
 -------
 
