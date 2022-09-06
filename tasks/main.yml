@@ -1,0 +1,13 @@
+---
+# tasks file for ansible_role_ps
+- name: gather process info
+  ansible.builtin.command: ps -ef
+  register: ret_command
+  changed_when: false
+
+- name: test process alive
+  ansible.builtin.assert:
+    that: "'{{ item }}' in ret_command.stdout"
+    fail_msg: |
+      {{ item }} not found.
+  loop: "{{ ps_list }}"
